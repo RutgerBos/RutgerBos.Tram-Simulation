@@ -1,0 +1,71 @@
+TBD. Even algemeen vertellen wat er voor files aanwezig moeten zijn, want er in welke files moet staan en op welke plekken deze files aanwezig moeten zijn etc.
+
+This is the user manual for the TramSim simulation package. Some general notes:
+- LINUX and Mac are currently not supported.
+- Each run of a simulation will create roughly 2MB of data. Keep this in mind when doing large batch runs.
+
+
+CODE FILES
+All code needed to compile the TramSim package is found in the following five code files
+Program.cs
+iHasRails.cs
+Tram.cs
+Misc.cs
+Event.cs
+
+PARAMETER FILES
+The simulation package uses several parameter files. Apart from initfile.ini, these names can be changed.
+
+initfile.ini
+CSToUithofdistr.txt
+UithofToCSdistr.txt
+DrivingParam.txt
+DistrStations.txt
+ExitProbs.txt
+
+
+
+HOW TO USE
+After compiling the tramsim.exe file, it should be placed so that the following file structure holds:
+
+TramSim.Exe
+FOLDER
+	initfile.ini
+	CSToUithofdistr.txt
+	UithofToCSdistr.txt
+	DrivingParam.txt
+	DistrStations.txt
+	ExitProbs.txt
+
+When executing the program, it will ask for the name of the folder. Provide the name of FOLDER, followed by a '\'. It will then run simulations using the parameters provided in the parameter files in FOLDER. It will create a separate folder for data files per run performed.
+Per station, several data files will be created, as well as some for each tram. An explanation per file follows.
+
+activityLogTram.csv 
+	Debugging file. 
+	Contains major event which have happened to this tram, as well as positions of these events.
+STATIONNAMEDwellTime.csv
+	Shows per departure (time in seconds since start of simulation) how long it has been since the tram arrived at that station.
+STATIONNAMEIntDepTime.csv
+	Shows per departure how long it has been since the last departure.
+STATIONNAMEPassDistr.csv
+	Debugging file.
+	Shows per time interval the expected number of passengers arriving per second.
+STATIONNAMEPassWaiting.csv
+	Shows per departure the number of passengers waiting at a station and the number of passengers in the tram.
+STATIONNAMEPunctuality.csv
+	Endstation only
+	Shows per departure deviation from the schedule
+STATIONNAMESchedule.txt
+	debuggin file.
+	Endstation only
+	Shows the times at which trams are scheduled to depart from this station.
+STATIONNAMETramsWaiting.csv
+	Shows per tram arrival the numbers of tram waiting to enter the station, as well as the number of trams at the station.
+STATIONNAMEWaitingTime.csv
+	Shows per end of passenger embarkation the number of passengers waiting at the start of embarkation, how long these have been waiting, the numbers of passengers which newly have arrived since the last passenger update, the time since the last passenger update and how many passengers are still waiting after embarkation has finished.
+TRAM.csv
+	debugging file
+	shows when, where from and where to a tram has been moved
+TRAMPassLog.csv
+	Shows per time, per location the number of passengers entering and exiting a tram.
+	
