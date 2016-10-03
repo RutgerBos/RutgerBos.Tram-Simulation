@@ -1,5 +1,3 @@
-TBD. Even algemeen vertellen wat er voor files aanwezig moeten zijn, want er in welke files moet staan en op welke plekken deze files aanwezig moeten zijn etc.
-
 This is the user manual for the TramSim simulation package. Some general notes:
 - LINUX and Mac are currently not supported.
 - Each run of a simulation will create roughly 2MB of data. Keep this in mind when doing large batch runs.
