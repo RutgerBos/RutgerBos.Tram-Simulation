@@ -50,7 +50,7 @@ namespace TramSim {
         int PassDir1;
         int NoTrams;
         int MaxPassTram;
-        int PerStationLeeway; //TODO: see if everything is loaded in and shit. This isn't.
+        int PerStationLeeway; 
         TimeDistr TramSchedule;
         TimeDistr PassDens_0;
         TimeDistr PassDens_1;
@@ -97,8 +97,6 @@ namespace TramSim {
 
         /*
             Only called if catastrophic error occurs.
-            Was written to make sure files were flushed properly in cases of errors, so better bugfinding could be done
-            For some reason: doesn't seem to work though. If you know why: please email at i.rutger.bos@gmail.com
         */
         public void EmergencyExit() {
             endSim();
