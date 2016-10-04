@@ -266,7 +266,7 @@ namespace TramSim {
 
 
 /*
-    All RNG functions
+    All RNG-based functions
 
 */
 
@@ -434,7 +434,7 @@ namespace TramSim {
     Station with two spots for trams to load/unload, a diamondcrossing in front of it and possible access to a depot.
 
 
-    note: some hardcoded paramters. Lock time (40), and turnaround time (4*60), for example.
+    note: some hardcoded parameters. Lock time (40), and turnaround time (4*60), for example.
 */
     public class Endstation : Station { 
 
