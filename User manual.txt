@@ -12,7 +12,7 @@ Misc.cs
 Event.cs
 
 PARAMETER FILES
-The simulation package uses several parameter files. Apart from initfile.ini, these names can be changed.
+The simulation package uses several parameter files. Apart from initfile.ini, these names can be changed, if these changes are reflected in the .ini file. 
 
 initfile.ini
 CSToUithofdistr.txt
